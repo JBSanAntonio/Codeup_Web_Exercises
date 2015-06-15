@@ -1,0 +1,53 @@
+main {
+	height: 80%;
+	border: 3px solid magenta;
+
+	margin: 20px;
+
+	padding: 10px;
+}
+
+body {
+	margin: 50px;
+	padding: 20px;
+}
+body {
+ 		background-color: #E5EEFF;
+ 	}
+ body { 
+ 		background-image: url(http://image.shutterstock.com/display_pic_with_logo/183487/130657934/stock-vector-italy-map-with-vector-icons-130657934.jpg);
+ 		no repeat center center fixed;
+ 		width: 80%;
+ 		margin: 20px auto;
+	}
+
+ h1,h2 {
+ 		color: #000;
+ 		text-decoration: underline; 
+ 	}
+
+ body {
+ 	font-style: Helvetica;
+ 	color: #000;
+	}	
+
+ul {
+	list-style: square;
+	}
+ol {
+	font-color: ##000;
+}	
+table {
+	color: #000;
+	table-layout: fixed;
+	}
+tr>td {
+	font-size: 1em;
+}	
+a:visited {
+	color: #00F;
+}	
+
+#demo-img {
+	opacity: 0.2;
+}
