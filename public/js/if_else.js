@@ -8,20 +8,20 @@ var message = (color==favorite)? "Favorite" : "Not Favorite"
 console.log(message)
 
 if (color=='red') {
-    	console.log('red is the color of an apple');
+    	console.log('Red is the color of an apple.');
     }else if (color=='orange') {
-		console.log('orange is the color of a pumpkin');
+		console.log('Orange is the color of a pumpkin.');
 	}else if (color=='yellow') {
-		console.log('yellow is the color of a lemon');
+		console.log('Yellow is the color of a lemon.');
 	}else if (color=='green') {
-		console.log('green is the color of grass');
+		console.log('Green is the color of grass.');
 	}else if (color=='blue') {
-		console.log('blue is the color of the sky');
-	}else if (color=='indigo') {
+		console.log('Blue is the color of the sky.');
+	}else /*if (color=='indigo') */{
 		console.log=('I do not know anything by that color');	
-	}else if (color=='violet') {
+	}/*else if (color=='violet') {
 		console.log=('I do not know anything by that color');
-	}
+	}*/
 
 
 
