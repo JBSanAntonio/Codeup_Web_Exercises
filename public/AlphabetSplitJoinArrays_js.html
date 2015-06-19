@@ -2,64 +2,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JS Manipulating Arrays</title>
+    <title>JS Alphabet Reverse Array</title>
 </head>
 <body>
-	<h1>JS Manipulating Arrays</h1>
+	<h1>JS Alphabet Reverse Array</h1>
  <script>
  'use strict';
 
-var letters = ['a', 'b', 'c', 'd', 'e'];
 
-(function logletters()  {
+var a = ['a','b','c','d','e'];
+var b = []
+for(var i=0;i<a.length;i++){
+    b.push(a.slice(a.length-i-1,a.length-i)[0])
+}
 
-	console.log(letters);
+	console.log(b[a])
 
-	letters.reverse();
-	console.log(letters);
+/*var arrayOne = ['a','b', 'c', 'd', 'e'];
 
-	/*var planetsAsString = planets.join("|");
-	console.log(planetsAsString);
+var reverse = function(array){
+    var arrayOne = array
+    var array2 = [];
 
-	var planetsAsArray = planetsAsString.split("|");
-	console.log(planetsAsArray);
+    for (var i = arrayOne.length-1; i >= 0; i--){
+      array2.push(arrayOne[i])
+    } 
+    return array2
+}
 */
-	/*console.log('Here is the list of planets:');
-	console.log(planets);
+/*reverse(arrayOne)*/
 
-	planets.push('Pluto');
-	console.log(planets);
+/*EXPLANATION: create a function of the a-e array - starting at -1 in the array which is e, push (add to the end) the prior element in the array (i-1); iterate/repeat until i is > or = 0; i-- causes the operation to occur after the function is invoked so the last letter moved to the end will be the letter at 0 which is a. */
 
-	planets.shift('Sun');
-	console.log(planets);
+/*An alternative way...*/
 
-	planets.pop('Pluto');
-	console.log(planets);
+/*var letters = ['a', 'b', 'c', 'd', 'e'];*/
+/*
+var a = ['a','b', 'c', 'd', 'e']
+var b = reverseArr(a);*/
 
-	planets.splice(3, 1);
-	console.log(planets);
+/*(function logletters()  {
 
-	planets.reverse();
-	console.log(planets);
+	console.log(letters);*/
 
-	planets.sort();
-	console.log(planets);*/
-	
-})()
-
-/*	var index = planets.indexOf('Earth');
-	console.log(index);*/
+/*	function reverseArr(input) {
+    var ret = new Array;
+    for(var i = input.length-1; i >= 0; i--) {
+        ret.push(input[i]);
+    }
+    return ret;*/
 
 </script>
 </body>
 </html>
-
-// todo:
-// Copy the array of planets you created in the last lesson.
-var planets = [];
-
-// todo: Join the planets array with pipes (|) to create a variable named 'planetsAsString'.
-console.log(planetsAsString);
-
-// todo: Split the 'planetsAsString' variable by pipes (|) to create a variable named 'planetsAsArray'.
-console.log(planetsAsArray);
