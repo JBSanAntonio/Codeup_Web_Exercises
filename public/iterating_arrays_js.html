@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Iterating Arrays</title>
+</head>
+<body>
+	<h1>JS Iterating Arrays</h1>
+ <script>
+ "use strict";
+
+
+
+(function () {
+
+	var names = ['Mao','Stalin','Ghengis','Attila'];
+
+	console.log('The length of each name is: ' + names.length);
+
+	for (var i = 0; i < names.length; i++) {
+    	console.log('The name at index ' + i + ' is: ' + names[i]);
+	}
+
+
+	names.forEach(function (element, index, array) {
+		console.log('The name at ' + index + ' is: ' + element);
+	});
+
+})();
+
+
+/*console.log(name[0]);
+
+console.log(name[1]);
+
+console.log(name[2]);
+
+console.log(name[3]);
+
+})*/
+
+</script>
+</body>
+</html>

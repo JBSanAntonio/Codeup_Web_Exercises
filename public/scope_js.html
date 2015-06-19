@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions JS</title>
+</head>
+<body>
+	<h1>Functions JS</h1>
+<script>
+    'use strict';
+
+     	// JavaScript code goes here
+(function ()  {
+        function sayHello (name)  {
+            return 'Hello, ' + name;
+        }
+
+        function isOdd (number)  {
+            return (number % 2 !== 0) ? true : false;
+        }
+
+        var myNameIs = 'Julie';
+        var random = Math.floor((Math.random()*100)+1);
+        var message = sayHello(MyNameIs);
+
+		console.log(message);
+
+        var result = 'is random odd?' + isOdd(random);
+        console.log(result);
+})();
+
+</script>
+</body>
+</html>

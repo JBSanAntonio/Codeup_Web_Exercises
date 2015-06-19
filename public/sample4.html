@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoisting in JS Functions</title>
+</head>
+<body>
+	<h1>JS Functions Hoisting</h1>
+    <script>
+        "use strict";
+
+        (function() {
+
+        }) ();
+
+        var message = "Hey guys!";
+
+        function sayHello() {
+            var msg = "Hey Mars!";
+            console.log(message);
+        }
+
+        sayHello();
+
+        console.log(message);
+</script>
+</body>
+</html>
+
+
+

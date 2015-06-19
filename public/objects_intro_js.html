@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Manipulating Arrays</title>
+</head>
+<body>
+	<h1>JS Manipulating Arrays</h1>
+ <script>
+ 'use strict';
+
+ 	(function()	{
+
+ 		var person = new Object();
+
+ 		person.firstName = "Julie ";
+ 		person.lastName = "Buser";
+
+ 		console.log(person.firstName + person.lastName);
+
+ 			alert("Hello! " + person.firstName + person.lastName);
+
+ 		person.sayHello=function()  {
+ 			console.log(this.firstName + this.lastName);
+ 			}
+})();
+
+</script>
+</body>
+</html>
+
+// todo:
+// Create person object with firstName and lastName properties (set to your first and last name).
+// var person = todo;
+
+// todo:
+// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
+
+// Say hello from the person object.
+// person.sayHello();
