@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM: Query and Modify</title>
+</head>
+<body>
+    <h1 id="main-header">Hello World!</h1>
+    <ul>
+        <li data-dbid="1">Item 1</li>
+        <li data-dbid="2">Item 2</li>
+        <li data-dbid="3">Item 3</li>
+        <li data-dbid="4">Item 4</li>
+        <li data-dbid="5">Item 5</li>
+    </ul>
+    <h2 id="sub-header">Hello Again.</h2>
+    <p class="sub-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+            <button id = "mainHeaderButton" > "Change Header" </button>
+            <button id = "subHeaderButton" > "Change SubHeader" </button>
+            <button id = "listItemsButton" > "Color List Items" </button>
+            <button id = "subParagraphButton" > "Change subPara text" </button>
+
+    <script>
+        "use strict";
+            // TODO: Uncomment next line and get the main header element by id
+             (function() {
+                
+                 var changeHeader = function (event) {
+
+                    var changeHeader = document.getElementById('main-header');
+                    mainHeader.innerHTML = "JavaScript is Cool";
+                };
+                var mainHeaderButton = document.getElementById('mainHeaderButton')
+                mainHeaderButton.addEventListener('click', changeHeader, false);
+    
+                var subHeaderButton = document.getElementById('subHeaderButton');
+                subHeaderButton.style.color = "#00F"; // Blue
+                subHeaderButton.addEventListener('click', subHeaderButton, false);
+           
+            // TODO: Uncomment the next line and get all list items
+
+                var listItems = document.getElementsByTagName('li');
+                listItemsButton.addEventListener('click', listItemsButton, false);
+                // Print the list elements
+            
+            // TODO: Set text color on every other list item to grey
+                for (var i = 0; i < listItems.length; i++)  {
+            // TODO: Set text color of li with dbid = 1 to blue
+                    listItems[0].style.color = "#00F";
+                    if (i % 2 !== 0)  {
+                        listItems[i].style.color = '#d3d3d3'; // Dark grey   
+                    }
+                
+                /*if itemList[i] */
+                }    
+                // Change the body font color
+                var bodyElement = document.getElementsByTagName('body')[0];
+                bodyElement.style.color = '#215E21'; // Green
+
+            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+
+            var subParagraph = document.getElementsByClassName('sub-paragraph');
+            subParagraph[0].innerHTML = "Mission Accomplished!"
+            subParagraphButton.addEventListener('click', subParagraphButton, false)
+            
+            })();
+
+            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    </script>
+</body>
+</html>
+
+
+<!-- ALTERNATIVE for Tigerstriping list
+
+    for (var i =1; i = listItems.length; i++)  {
+    var dbid = listItems[i].getAttribute("data-dbid");
+
+    if (dbid == 1)  {
+        listItems[i].style.color = '#00F';
+    }  else if (dbid % 2 == 0)  {
+       listItems[i].style.color = '#808080';
+    }  else  {
+        listItems[i].style.color="#000";
+        };
+    };
+    
+} -->
+            
