@@ -6,12 +6,11 @@
 	<script>
 	"use strict"
 		$(document).ready(function() {
-			$('.codeup').css("border", "1px solid red");
-			$("li").css("fontSize", "20px");
-			var contents = $("h1").html();
-			alert(contents);
-		});
-		
+            $("h1, p, li").css('background-color', 'salmon');
+            var contents = $("h1").html();
+            alert(contents);
+        });
+	
 	</script>	
 </head>
 <body>
@@ -30,7 +29,7 @@
     	<h2 id="websites" class = "codeup"><strong>My Favorite Websites</strong></h2>
 
             <ol id="list">
-                <li class = "codeup"><a href="http://knowem.com/">Knowem</a></li>
+                <li class = "websites"><a href="http://knowem.com/">Knowem</a></li>
                 <li class = "websites"><a href="http://rome2rio.com/">Travel Expense Site</a></li>
                 <li class = "websites"><a href="http://finance.yahoo.com">Yahoo Finance</a></li>
                 <li class = "websites"><a href="http://maps.google.com/">Google Maps</a></li>
