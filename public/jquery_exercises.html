@@ -2,31 +2,20 @@
 <html>
 <head>
 	<title>jQuery</title>
-	<script src="/js/jquery.js"></script>
-	<script>
-	"use strict"
-		$(document).ready(function() {
-            $("h1, p, li").css('background-color', 'salmon');
-            var contents = $("h1").html();
-            alert(contents);
-        });
-	
-	</script>	
 </head>
 <body>
+    <div id = "main" class = "codeup">
 
-	<div id = "main" class = "codeup">
-
-	<h1 id="favorites">Favorite Things jQuery ID Exercise</h1>
-	
-		<h2></strong>My Favorite Actor</strong> </h2>
-    		<p>
+    <h1 id="favorites">Favorite Things jQuery ID Exercise</h1>
+    
+        <h2></strong>My Favorite Actor</strong> </h2>
+            <p>
             I have many favorite actors. Phillip Seymour Hoffman was one of my favorite actors. He was amazing as Truman Capote in the movie Capote. 
-        	</p>
+            </p>
     </div>
 
     <div>
-    	<h2 id="websites" class = "codeup"><strong>My Favorite Websites</strong></h2>
+        <h2 id="websites" class = "codeup"><strong>My Favorite Websites</strong></h2>
 
             <ol id="list">
                 <li class = "websites"><a href="http://knowem.com/">Knowem</a></li>
@@ -36,5 +25,29 @@
                 <li class = "websites"><a href="http://google.com/">Google</a></li>
             </ol>
     </div>
+
+	<script src="/js/jquery.js"></script>
+	<script>
+	"use strict"
+		$(document).ready(function() {
+            $('h1').click(
+                function() {
+                    $(this).css('background-color', '#00F');
+                });
+            $('p').dblclick(
+                function() {
+                    $(this).css('font-size', '18px');
+                });
+            $('li').hover(
+                function() {
+                    $(this).css('background-color', '#F00');
+                },
+                function() {
+                    $(this).css('background-color', '#FFF');
+                }
+            );
+        });
+
+	</script>	
 </body>
 </html>
