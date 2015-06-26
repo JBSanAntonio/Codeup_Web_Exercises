@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+    
+
+<p>Please type the code to add 30 lives:</p>
+    <form>
+        <input type="text" id="textfield" name="textfield" placeholder="Type Code Here"/>
+    </form>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+
+var keys = {
+    u1: {
+        code: 38,
+        pressed: false,
+        next: 'u2'
+    },
+    u2: {
+        code: 38,
+        pressed: false,
+        next: 'd1'
+    },
+    d1: {
+        code: 40,
+        pressed: false,
+        next: 'd2'
+    },
+    d2: {
+        code: 40,
+        pressed: false,
+        next: 'l1'
+    },
+    l1: {
+        code: 37,
+        pressed: false,
+        next: 'r1'
+    },
+    r1: {
+        code: 39,
+        pressed: false,
+        next: 'l2'
+    },
+    l2: {
+        code: 37,
+        pressed: false,
+        next: 'r2'
+    },
+    r2: {
+        code: 39,
+        pressed: false,
+        next: 'b'
+    },
+    b: {
+        code: 66,
+        pressed: false,
+        next: 'a'
+    },
+    a: {
+        code: 65,
+        pressed: false,
+        next: 'u1'
+    },
+},
+    nextKey = 'u1';
+
+$(document).keydown(function(e) {
+    if (e.keyCode === keys[nextKey].code) {
+        keys[nextKey].pressed = true;
+        nextKey = keys[nextKey].next;
+    } else {
+        keys.u1.pressed = false;
+        keys.d1.pressed = false;
+        keys.u2.pressed = false;
+        keys.d2.pressed = false;
+        keys.l1.pressed = false;
+        keys.r1.pressed = false;
+        keys.l2.pressed = false;
+        keys.r2.pressed = false;
+        keys.a.pressed = false;
+        keys.b.pressed = false;
+        nextKey = 'u1';
+    }
+
+    if (keys.u1.pressed && keys.u2.pressed && keys.d1.pressed && keys.d2.pressed && keys.l1.pressed && keys.r1.pressed && keys.l2.pressed && keys.r2.pressed && keys.b.pressed && keys.a.pressed) {
+        alert('You have added 30 more lives!')
+    }
+})
+})
+</script>
+</body>
+</html>
+           
