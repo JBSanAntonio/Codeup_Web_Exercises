@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10 FAQs about National Parks</title>
+	<h1>10 FAQs about National Parks</h1>
+</head>
+<style type="text/css">
+
+  		.invisible {
+  			display: none;
+  		};
+
+</style>
+<body>
+<div></div>
+<dl>
+    <dt>How much land is set aside for national parks in the US?</dt>
+    <dd>51 million acres! About the size of Kansas.</dd>
+    <dt>What was the first national park?</dt>
+    <dd>Yellowstone</dd>
+    <dt>Who created the first national park?</dt>
+    <dd>President Ulysses S. Grant in 1872. Its caretakers were the cavalry.</dd>
+    <dt>What is the largest national park in the US?</dt>
+    <dd>Wrangell-St. Elias in Alaska. (It is 13.2 million acres and covers an area larger than Costa Rica.)</dd>
+    <dt>What is the smallest national park in the US?</dt>
+    <dd>Thaddeus Kosciuszko National Memorial in Pennsylvania. it is only 0.2 acres! (He was a Polish soldier who joined the Continental Army during American Revolution.)</dd>
+    <dt>Only one state does not have a national park. Which state is that?</dt>
+    <dd>Delaware.</dd>
+    <dt>What US national park is most visited?</dt>
+    <dd>The Blue Ridge Parkway, the 469-mile drive that threads the Appalachian Mountains of North Carolina and Virginia.</dd>
+    <dt>Which US national park contains the high­est point in North Amer­ica?</dt>
+    <dd>Denali NP includes Mount McKin­ley at 20,320 feet.</dd>
+    <dt>Which national park contains the lowest point in North America?</dt>
+    <dd>Death Val­ley NP</dd>
+    <dt>Which US national park is the largest subtropical wilderness in the United States</dt>
+    <dd>Everglades National Park which protects an unparalleled landscape that provides important habitat for numerous rare and endangered species like the manatee,  American crocodile, and the elusive Florida panther.</dd>
+</dl>
+    <script src="/js/jquery.js"></script>
+    <script>
+        "use strict";
+       
+        $('document').ready(function() {
+        
+        $('dd').addClass('invisible');
+
+        $('div').html('<a href="#">Click to toggle the .invisible class on the DD elements</a>')
+
+    		$('div').on('click', 'a', function(event) {
+        		event.preventDefault();
+    			$('.invisible').toggle();
+    		});
+		});
+    </script>
+</body>
+</html>
