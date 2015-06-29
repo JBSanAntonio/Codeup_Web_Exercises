@@ -2,14 +2,9 @@
 <html>
 <head>
     <title>Konami Code</title>
-    
-   <!--  var src = $(this).find('img').attr('src');
-    $('body').css('backgroundImage','url("/img/Seven Samurai_3.jpg")'); -->
-    
 </head>
 <body>
     <h1>Konami Code</h1>
-
 
 <p>Please type the code to receive extra lives:</p>
     <form>
@@ -20,72 +15,18 @@
     <script>
         "use strict";
 
-        var saveArray = new Array();
-        var saveArray = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+            var keys = [ ];
+            var konami = '38,38,40,40,37,39,37,39,66,65';
 
-        $(document).ready(function() {
-
-        $("#textfield").keydown(function (keys){
-
-            if (keys.which == 38 && saveArray[0] == '0') {
-                saveArray[0] = '1';
-                    /*1st time pressed up key*/
-            }
-                else if (keys.which == 38 && saveArray[0] == '1' && saveArray[1] == '0') {
-                    saveArray[1] = '1';
-                    /*2nd time press up */
-                }
-                else if (keys.which == 40 && saveArray[1] == '1' && saveArray[2] == '0') {
-                    saveArray[2] = '1'
-                    /*1st time pressed down key*/
-                }  
-                else if (keys.which == 40 && saveArray[2] == '1' && saveArray[3] == '0') {
-                    saveArray[3] = '1'
-                    /*2nd time pressed down key*/
-                }
-                else if (keys.which == 37 && saveArray[3] == '1' && saveArray[4] == '0') {
-                    saveArray[4] = '1'
-                    /*1st time pressed left key*/
-                }  
-                else if (keys.which == 39 && saveArray[4] == '1' && saveArray[5] == '0') {
-                    saveArray[5] = '1'
-                    /*1st time pressed right key*/
-                }
-                else if (keys.which == 37 && saveArray[5] == '1' && saveArray[6] == '0') {
-                    saveArray[6] = '1'
-                    /*2nd time pressed left key*/
-                }  
-                else if (keys.which == 39 && saveArray[6] == '1' && saveArray[7] == '0') {
-                    saveArray[7] = '1'
-                    /*2nd time pressed right key*/
-                }
-                else if (keys.which == 66 && saveArray[7] == '1' && saveArray[8] == '0') {
-                    saveArray[8] = '1'
-                    /*b key*/
-                }  
-                else if (keys.which == 65 && saveArray[8] == '1' && saveArray[9] == '0') {
-                    saveArray[9] = '1'
-                    /*a key successful key sequence */
-                    alert("You have added 30 lives!")
-                }
-                    else {
-                    saveArray[0] = '0';
-                    saveArray[1] = '0';
-                    saveArray[2] = '0';
-                    saveArray[3] = '0';
-                    saveArray[4] = '0';
-                    saveArray[5] = '0';
-                    saveArray[6] = '0';
-                    saveArray[7] = '0';
-                    saveArray[8] = '0';
-                    saveArray[9] = '0';
-                    saveArray[10] = '0';
-                    }
-            }) 
-            });
-
+            $(document).ready(function() { 
+                $(document).keyup(function(e) {
+                    keys.push(e.keyCode);
+                    if (keys.toString().indexOf(konami) >= 0) {
+                        $(this).unbind("keyup");
+                        alert("You have just earned 30 lives!");
+                    };
+                })
+            })
     </script>
-</head>
-<body>
 </body>
 </html>
