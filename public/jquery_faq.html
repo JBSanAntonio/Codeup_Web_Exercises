@@ -40,7 +40,7 @@
 </dl>
 
     <h1>Parks List</h1>
-    <h3>National Parks</h3>
+    <h3 id="national-parks-toggle">National Parks</h3>
     <ul id="national-parks" class="allLists">
         <li>Arches</li>
         <li>Badlands</li>
@@ -49,7 +49,7 @@
         <li>Everglades</li>
     </ul>
 
-    <h3>State Parks of Texas</h3>
+    <h3 id="state-parks-texas-toggle">State Parks of Texas</h3>
     <ul id="state-parks-texas" class="allLists">
         <li>Abilene</li>
         <li>Big Bend</li>
@@ -58,7 +58,7 @@
         <li>Enchanted Rock</li>
     </ul>
 
-    <h3>State Parks Not in Texas</h3>
+    <h3 id="state-parks-notTexas-toggle">State Parks Not in Texas</h3>
     <ul id="state-parks-notTexas" class="allLists">
         <li>The "Grand Canyon of the East," New York's Letchworth State Park.</li>
         <li>Porcupine Mountains Wilderness</li>
@@ -77,11 +77,16 @@
 
             $('div').on('click', 'a', function(event) {
                 event.preventDefault();
-                    $('dd').toggle();
+                    $('dd').fadeToggle();
             });
-            $('li').click(function() {
-                    /*add the invisible class on parent ul of any li that is clicked.*/
-                    $(this).parent().hide();
+            $('#national-parks-toggle').click(function() {
+                $('#national-parks').fadeToggle();
+            });
+            $('#state-parks-texas-toggle').click(function() {
+                $('#state-parks-texas').fadeToggle();
+            });
+             $('#state-parks-notTexas-toggle').click(function() {
+                $('#state-parks-texas').fadeToggle();
             });
                     /* makes the first li element in each ul have font-weight: bold.*/
                     $("#national-parks").children().first().css ('font-weight', 'bold');
