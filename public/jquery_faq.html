@@ -60,7 +60,7 @@
 
     <h3>State Parks Not in Texas</h3>
     <ul id="state-parks-notTexas" class="allLists">
-        <li>The "Grand Canyon of the East," New York's Letchworth State Park. </li>
+        <li>The "Grand Canyon of the East," New York's Letchworth State Park.</li>
         <li>Porcupine Mountains Wilderness</li>
         <li>Ha Ha Tonka</li>
         <li>Devil's Lake</li>
@@ -77,13 +77,11 @@
 
             $('div').on('click', 'a', function(event) {
                 event.preventDefault();
-                    $('dd').addClass('invisible');
-                    $('.invisible').toggle();
+                    $('dd').toggle();
             });
-            $('li').click(function(event) {
-                event.preventDefault();
+            $('li').click(function() {
                     /*add the invisible class on parent ul of any li that is clicked.*/
-                    $(this).parent().toggleClass('invisible');
+                    $(this).parent().hide();
             });
                     /* makes the first li element in each ul have font-weight: bold.*/
                     $("#national-parks").children().first().css ('font-weight', 'bold');
