@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather API Example</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+
+	<style type="text/css">
+
+	.container {
+		background-color: #87CEFA;
+		height: 500px;
+	}
+
+	.button {
+		background-color: #191970;
+		border: 3px solid darkgrey;
+		border-style: groove;
+	}
+
+	.entryBox {
+		background-color: #FFF;
+		height: 29px;
+		width: 150px;
+	}
+
+	.column {
+		background-color: white;
+		border: 3px solid darkgrey;
+		border-style: groove;
+	}
+
+	.row {
+		text-align: center;
+		padding: 20px;
+		box-shadow: inset;
+	}
+
+	.topHeading {
+		text-indent: 10px;
+	}
+
+	</style>
+</head>
+<body>
+
+	<main class = "container">
+		<h1 class = "topHeading">Weather Application</h1>
+		<h3 class = "subHeading">San Antonio</h2>
+			<br>
+
+    <div class="row">
+    	<p></p>
+        <div class="col-md-4 column One" id="day0Forecast"><strong>Today</strong></div>
+        <p></p>
+		<div class="col-md-4 column Two" id="day1Forecast"><strong>Tomorrow</strong></div>
+		<p></p>
+		<div class="col-md-4 column Three" id="day2Forecast"><strong>Day After Tomorrow</strong></div>
+		<p></p>
+	</div>
+
+    </main>     
+
+	<script src = "/js/jQuery.js"></script>
+	<script>
+
+	(function() {
+        "use strict";
+
+	var forecastData = [];
+
+		var ajaxRequest = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+	    	APPID: "1b69a7c48f1e737e89042017b912c9f1",
+	    	q:     "San Antonio, TX",
+	    	cnt:   3,
+	    	units: "imperial"
+
+		});
+
+		ajaxRequest.always(function() {
+			console.log('request sent');
+		});
+
+		ajaxRequest.fail(function(data, error) {
+			console.log(error);
+			console.log(ajaxRequest.status);
+		})
+
+		ajaxRequest.done(function(data) {
+			console.log(data);
+			var htmlString = '';
+			var imageIcon 
+			for(var i = 0; i < 3; i++) { 
+				htmlString += '<p>' + data.list[i].temp.max + "°/ " + data.list[i].temp.min + "° " + '</p>';
+				htmlString += "<img src = 'http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png' >";
+				htmlString += '<p class = "clouds">' + '<strong>Conditions: </strong>' + data.list[i].weather[0].description + '</p>';
+				htmlString += '<p class = "humidity">' + '<strong>Humidity: </strong>' + data.list[i].humidity + '</p>';
+				htmlString += '<p class = "pressure">' + '<strong>Pressure: </strong>' + data.list[i].pressure + '</p>';
+				
+				$('#day' + i + 'Forecast').append(htmlString);
+				htmlString = ''
+            };
+        });
+	})()
+
+</script>
+
+</body>
+</html>
