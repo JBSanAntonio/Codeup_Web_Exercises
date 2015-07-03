@@ -8,7 +8,7 @@
 
 	.container {
 		background-color: #87CEFA;
-		height: 500px;
+		height: 400px;
 	}
 
 	.button {
@@ -48,6 +48,14 @@
 		<h3 class = "subHeading">San Antonio</h2>
 			<br>
 
+	<input id="lat" class = "entryBox" type="text" placeholder="Latitude">
+	<input id="long" class = "entryBox" type="text" placeholder="Longitude">
+
+    <button id="createSubmitButton" class="button btn-primary">Submit</button>
+    <p></p>
+    <p></p>
+   
+
     <div class="row">
     	<p></p>
         <div class="col-md-4 column One" id="day0Forecast"><strong>Today</strong></div>
@@ -73,7 +81,6 @@
 	    	q:     "San Antonio, TX",
 	    	cnt:   3,
 	    	units: "imperial"
-
 		});
 
 		ajaxRequest.always(function() {
@@ -88,7 +95,6 @@
 		ajaxRequest.done(function(data) {
 			console.log(data);
 			var htmlString = '';
-			var imageIcon 
 			for(var i = 0; i < 3; i++) { 
 				htmlString += '<p>' + data.list[i].temp.max + "°/ " + data.list[i].temp.min + "° " + '</p>';
 				htmlString += "<img src = 'http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png' >";
