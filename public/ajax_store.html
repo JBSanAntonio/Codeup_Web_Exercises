@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Store</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link rel=“stylesheet” href=“/css/ajaxStore.css”>
+    <link rel="stylesheet" href = "/css/ajaxStore.css">
+    <title>Online Store</title>
 
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<div class = "container"> 
 
-<table class="table" id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
-<p>
-<p></p>
- <button id="refreshInventory">Refresh Inventory</button>
-</p>
+    <div>
+        <table class="table" id="products">
+            <thead>
+                <tr><h1>My Tool Store</h1></tr>
+                <tr>
+                    <th class = "tableHeading">Title</th>
+                    <th class = "tableHeading">Quantity</th>
+                    <th class = "tableHeading">Price</th>
+                    <th class = "tableHeading">Categories</th>
+                </tr>
+            </thead>
+            <tbody id="insertProducts"></tbody>
+        </table>
+    </div>
+
+    <div>
+     <h3><button id="refreshInventory">Refresh Inventory</button></h3>
+    </div>
+
+</div>
 
 <script src="/js/jQuery.js"></script>
 
@@ -49,10 +54,11 @@
     ajaxRequest.done(function(data) {
         var htmlString = '';
 
+    // TODO: Take the data from inventory.json and append it to the products table
         for(var i = 0; i < data.length; i+=1) {   
             htmlString += '<tr><td>' + data[i].title + '</td>';
             htmlString += '<td>' + data[i].quantity + '</td>';
-            htmlString += '<td>' + data[i].price + '</td>';
+            htmlString += '<td>' + '$' + data[i].price + '</td>';
             htmlString += '<td>' + data[i].categories.join(", ") + '</td></tr>';
             console.log(htmlString);
         }
@@ -69,7 +75,6 @@
 
 }())
 
-    // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
