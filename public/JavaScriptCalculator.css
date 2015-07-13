@@ -1,10 +1,10 @@
-.container
- {
-    border: 2px solid #000;
-    width: 150;
-    background-color: indigo;
-    text-align: center;
-    margin-left: 0;
+.container {
+  border: 2px solid #000;
+  width: 150;
+  background-color: midnightblue;
+  text-align: center;
+  margin: 1em 0 0 1em;
+  color: midnightblue;
 }
 
 .operandOperator  {
@@ -28,10 +28,11 @@
 }
 
 button {
-	background-color: #FFF;
+	background-color: lightgrey;
 	width: 20%;
 	height: 20px;
 	border-style: none;
+  color: midnightblue;
 }
 
 
