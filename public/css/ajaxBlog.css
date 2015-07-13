@@ -1,0 +1,51 @@
+body {
+	background-color: #fff;
+	margin-left: 2em;
+	font-family: Poiret One, serif;	
+}
+.aboutPara {
+	font-style: italic;
+	font-size: 0.7em;
+	text-indent: 1em;
+	color: #333;
+	text-indent: 2em;
+}
+.blog {
+	text-indent: 2em;
+	padding: 1em;
+	font-size: .9em;
+}
+h1 {
+	font-size: 3em;
+	text-align: left;
+	text-indent: 0.5em;
+	padding-top: 1em;
+	color: midnightblue;
+	background-image: url(/img/croppedVenueVineWineGlassPic.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 8em;
+}
+h2 {
+}
+.content {
+	text-indent: 1em;
+	
+}
+h3 {
+	font-style: italic;
+	font-size: 1em;
+	text-indent: 1em;
+	font-style: bold;
+}
+.title {
+	font-size: 30px;
+}
+#addPost {
+	border: 1px solid black;
+	background-color: midnightblue;
+	width: 6em;
+	height: 2em;
+	font-size: 1em;
+	color: #fff;
+}
