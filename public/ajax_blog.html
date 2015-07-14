@@ -7,45 +7,35 @@
 	<link rel="stylesheet" type="text/css" href="/css/ajaxBlog.css">
 </head>
 <body>
-        <h1><strong>Venue & Vine</strong>
-            <p></p>
-            <p></p>
-            <p class = "aboutPara"><strong>Wine, cuisine and scene</strong></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p class = "blog"><strong>Blog Site</strong></p>
+<div class = "wrapper">
+    <h1><strong>Venue & Vine</strong>
+        <p class = "aboutPara">Wine Blog</p>
     </h1>
-<div id="posts"> 
 
-    <div class = "row">
-
-        <div class="col-md-6 archivedPosts">
-            <h2 class="title">Blog Post</h2>
-                <p class="content">Blog Post Content:</p>
-            <h3 class="categories">Blog Categories:</h3>
-            <h4 class="date">Date:</h4>
+<div class = "row">
+        <div class="col-md-8 archivedPosts">
+            <div id = "posts">
+                <h2 class="title"></h2>
+                    <p class="content"></p>
+                <h3 class="categories"></h3>
+                <h4 class="date"></h4>
+            </div>
         </div>
-        <div class = "col-md-6 newPosts">
+        <div class = "col-md-4 newPosts">
             <h2 class="title">Create a New Post</h2>
              <div class="col-md-6">
                 <label for="post-title">Title:</label>
                 <input id="post-title" name="newPostTitle" id="newPostTitle">
-                    <p></p>
-                <label for="post-body">Post content:</label>
+                <label for="post-body">Post Content:</label>
                 <textarea id="post-body" rows="10"></textarea>
-                    <p></p>
                 <label for="post-categories">Category Types:</label>
                 <input id="categories" name="post-categories" id="categories">
-                <p></p>
-                <p></p>
                 <button id="addPost">Add Post</button>
             </div>
         </div>
-
-    </div>
-
 </div>
+</div>
+
 
 <!-- Add
  additional entries to blog.json and make sure your changes are reflected on the page.
@@ -84,7 +74,7 @@
         posts.push(post);
 
         var header = '<h2>' + post.title + '</h2>';
-        var content = '<p>' + post.content + '</p>';
+        var content = '<p class = "content">' + post.content + '</p>';
         var categories = '<h3>' + 'Categories: ' + post.categories + '</h3>';
         var date = '<h4>' + 'Date: ' + post.date + '</h4>';
 
