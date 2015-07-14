@@ -1,0 +1,25 @@
+#container {
+	background-image: url(/img/sevenSamurai.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #fff;
+	height: 800px;
+}
+h1 {
+	font-size: 5em;
+	text-indent: 1em;
+	padding-top: 1em;
+}
+h2 {
+	font-size: 3em;
+	text-indent: 2em;
+	font-style: italic;
+}
+.form {
+	text-indent: 3em;
+	font-size: 2.5em;
+}
+#textfield {
+	height: 50px;
+	width: 250px;
+}
