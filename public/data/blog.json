@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Ideal Wine to Pair with Spicy Foods",
+        "content": "Dr. Loosen makes an affordable crowd-pleasing off-dry Riesling that has gained recognition from the critics. Dr. L Riesling pairs exeptionally well with spicy foods, including Tex-Mex and Thai curry dishes.",
+        "categories": [
+            "riesling",
+            "white wine"
+        ],
+        "date": "May 1, 2015"
+    }, {
+        "title": "Selections for Summer Sipping",
+        "content": "Rosé wines make a comeback every year when the thermometer rises. For a high quality rosé, look to Tavel in southern France. The Provence region specializes in producing dry, mineral-driven rosés with refreshing acidity and fragrant berry aromas. The color of rosé may range from pale pink to deep salmon. Another notable selection is Chateau Miraval Côtes de Provence Rosé, produced by Famille Perrin for Brad Pitt and Angelina Jolie. Miraval was the only rosé named to the Wine Spectator's Top 100 Wines of 2014.",
+        "categories": [
+            "rosé",
+            "wine",
+            "summer"
+        ],
+        "date": "May 15, 2015"
+    }, {
+        "title": "Most Awarded Texas Winery at LA Event",
+        "content": "Haak Vineyards & Winery in Santa Fe, Texas, won eight medals at the Los Angeles International Wine & Spirits Competition. Haak picked up a Gold Medal, Best of Class for its Blanc du Bois Semi Sweet and a Gold Medal for its Blanc du Bois Madeira.",
+        "categories": [
+            "Texas wineries",
+            "Madeira",
+            "fortified wines"
+        ],
+        "date": "June 30, 2015"
+    }
+]
