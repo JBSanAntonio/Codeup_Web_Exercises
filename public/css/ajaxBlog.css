@@ -2,35 +2,62 @@ body {
 	background-color: #fff;
 	margin-left: 2em;
 	font-family: Poiret One, serif;	
+	border: 3px solid #000099;
+}
+.wrapper {
+	margin: 0;
+	padding: 0;
+}
+.row {
+	margin: 0;
+	padding: 0;
 }
 .aboutPara {
-	font-style: italic;
 	font-size: 0.7em;
-	text-indent: 1em;
+	font-style: bold;
+	text-indent: 0.5em;
 	color: #333;
-	text-indent: 2em;
+	text-indent: 1em;
+	padding: 1em;
 }
 .blog {
 	text-indent: 2em;
 	padding: 1em;
-	font-size: .9em;
+	font-size: 2em;
+}
+#posts {
+	background-color: #fff;
+	color: #000;
+	padding-left: 3em;
+	padding-right: 3em;
+	font-size: 1em;
+	background-image: url(/img/miraval.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 20%;
+}
+.newPosts {
+	padding-left: 5em;
+	padding-right: 2em;
 }
 h1 {
-	font-size: 3em;
+	font-size: 4em;
 	text-align: left;
-	text-indent: 0.5em;
+	text-indent: 0.3em;
 	padding-top: 1em;
-	color: midnightblue;
+	color: #000099;
 	background-image: url(/img/croppedVenueVineWineGlassPic.jpg);
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 8em;
+	margin: 0;
 }
 h2 {
+	font-size: 3em;
 }
 .content {
-	text-indent: 1em;
-	
+	font-size: 1.5em;
+	padding: 0.5em 10em 1em 0.5em;
 }
 h3 {
 	font-style: italic;
@@ -38,14 +65,26 @@ h3 {
 	text-indent: 1em;
 	font-style: bold;
 }
-.title {
-	font-size: 30px;
+h4 {
+	text-indent: 0.5em;
 }
 #addPost {
 	border: 1px solid black;
-	background-color: midnightblue;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: #000099	;
 	width: 6em;
 	height: 2em;
 	font-size: 1em;
 	color: #fff;
+}
+#post-title {
+	width: 25em;
+}
+#post-body {
+	width: 25em;
+	height: 35em;
+}
+#categories {
+	width: 25em;
 }
