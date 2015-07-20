@@ -1,0 +1,10 @@
+h1 {
+	color: indigo;
+}
+.table-striped {
+	background-color: lightgrey;
+	padding: 3em;
+	margin: 2em;
+	font-size: 2em;
+	border: 1em solid midnightblue;
+}

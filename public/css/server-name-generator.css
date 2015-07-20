@@ -1,0 +1,14 @@
+h1 {
+	color: plum;
+	margin: 2em;
+	font-size: 4em;
+}
+h2	{
+	color: skyblue;
+	text-align: center;
+	margin: 2em;
+	font-size: 4em;
+	border: 2px solid darkgrey;
+	padding: 1em;
+}
+
