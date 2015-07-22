@@ -1,8 +1,5 @@
 <?php
 
-	$username = isset($_POST['Username']) ? $_POST['Username'] : '';
-	$password = isset($_POST['password']) ? $_POST['password'] : '';
-
 	var_dump($_POST);
 
 
