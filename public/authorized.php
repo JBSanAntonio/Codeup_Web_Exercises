@@ -18,6 +18,8 @@
 	<h1>User is authorized</h1>
 	<h2>Username is: <?= $_SESSION['LOGGED_IN_USER'] ?></h2>
 <!-- Add link to authorized.php page that goes to logout.php.-->
-	
+
+	<a href="logout.php">Logout</a>
+
 </body>
 </html>
