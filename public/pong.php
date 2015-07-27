@@ -2,6 +2,8 @@
 
 <?php
 
+	require_once '../Input.php';
+
 	function pageController()
 	{
 	    // Initialize an empty data array and set counter to zero
@@ -9,16 +11,18 @@
 	    $counter = 0;
 
 	    /*if is a query string get request, update data counter so that counter adds one for up and subtracts one for down*/
-	    if(isset($_GET['request'])){
-	    	if ($_GET['request'] == 'hit'){
+	    if (Input::has('request')){
+	    	if (Input::get('request') == 'hit'){
 	    		$_GET['count']++;
 	    		$data['counter']=$_GET['count'];
-	    	} elseif ($_GET['request'] == 'miss'){
+	    	} elseif (Input::get('request') == 'miss'){
 	    		// $_GET['count'] = 0;
 	    		$data['counter'] = 0;
 	    		echo 'Game Over';
 	    	}
-  		}
+
+	    }
+	    
 	    return $data; 
 	}
 
