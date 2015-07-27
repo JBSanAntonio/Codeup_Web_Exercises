@@ -1,8 +1,5 @@
 <?php
 
-/*put this in other file?
-*//*public static input*/
-
 class Input
 {
     /**
@@ -25,7 +22,7 @@ class Input
      * @param mixed $default default value to return if key not found
      * @return mixed value passed in request
      */
-    
+
     public static function get($key, $default = null)
     {        
         // TODO: Fill in this function
