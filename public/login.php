@@ -1,33 +1,44 @@
 <?php
+	require_once '../Auth.php';
+	require_once '../Input.php';
 
 	session_start();
+		
+/*check to see if user logged in, if logged in then send to authorized page*/
+	if(!Auth::check()){	
+		header ("Location: authorized.php");
+		exit();
+	}
 
-/*	Add a check to the login.php page to see if the user is logged in and then
- if they are, redirect to the authorized.php page instead of showing the login page
-*/
-	 function checklogin() {
-	  return (isset($_SESSION['login'])) ? true : false;
-	};
+	/*if user is not logged in, then take in username and password*/
+	if(Input::has('password') && Input::has('username')) {
+		$username=Input::get('username');
+		$password=Input::get('password');
 
-	if(checklogin() === true){
-		header ("Location: authorize.php");
-	} elseif(!empty($_POST)) {
-		if ($_POST['username'] == 'guest' && $_POST['password'] == 'password') {
-			$_SESSION['LOGGED_IN_USER']=$_POST['username'];
-			header('location: authorized.php');
+	/*if username & password are valid, then send user to authorized page*/
+		if(Auth::attempt($username, $password)) {
+			header('Location"/authorized.php');
 			exit();
-		} else {
-			echo "Login Failed"; 
 		}
-	} 
+	} 	
+	} elseif (Auth::attempt($username,$password)){
+			header('location: authorized.php');
+			exit();	
+	} else {
+/*	If either the username or password are incorrect then log an error: 
+"User $username failed to log in!".*/
+			echo "User $username failed to log in!"; 
+		}	
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>POST Example</title>
+    <link rel="stylesheet" href="css/loginPHP.css">
 </head>
 <body>
+	
 	<h1>Login with Username and Password</h1>
 
 	 <form method="POST">
@@ -42,11 +53,6 @@
 </html>
 
 
- 	<!-- if (empty($_SESSION['login']) {
- 		header ("Location: authorize.php")
- 	} -->
-
- 	<!-- if (isset($_SESSION['login']) && $_SESSION['login'] != '') {
-	header ("Location: authorized.php"); -->
+ 	
 
 
