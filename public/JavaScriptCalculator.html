@@ -2,19 +2,19 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/JavaScriptCalculator.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/JavaScriptCalculator.css">
 </head>
 <body>
 
-    <div class = "container">
-        <div class = "operandOperator"/>
+    <div class = "container responsive">
+        <div class = "displayRow">
             <input id = "leftOperand" type="text"/>
             <input id = "Operator" type="text"/>
             <input id = "rightOperand" type="text"/>
         </div>
-        <div id = "value">
-            </div>            
+           
         <div id = "inputs">
             <div class="row one">
                 <button class = "numbers" id="button1" value="1">1</button>
@@ -32,12 +32,12 @@
                 <button class = "numbers" id="button7" value="7">7</button>
                 <button class = "numbers" id="button8" value="8">8</button>
                 <button class = "numbers" id="button9" value="9">9</button>
-                <button class = "operators" id="buttonMultiply" value="*">*</button>
+                <button class = "operators" id="buttonMultiply" value="*">x</button>
             </div>
             <div class="row four">
-                <button class = "reset" id="buttonClear" value="">C</button>      
+                <button class = "clear operators" id="buttonClear" value="">C</button>      
                 <button class = "numbers" id="button0" value="0">0</button>
-                <button class = "equals" id="buttonEquals" value="=">=</button>
+                <button class = "equals operators" id="buttonEquals" value="=">=</button>
                 <button class = "operators" id="buttonDivide" value="/">/</button>
             </div>
         </div>
