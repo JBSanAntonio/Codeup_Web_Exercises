@@ -1,0 +1,76 @@
+.container {
+  width: 200px;
+  height: 250px;
+  padding: 0em;
+  background-color: white;
+  text-align: center;
+  font-size: 105%;
+  color: #003366;
+  opacity: 0.8;
+  border-spacing: 0;
+  border-bottom-right-radius: 5px;
+  margin: 2em 0 0 2em;
+  overflow: hidden;
+}
+.body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+.displayRow {
+  vertical-align: top;
+}
+.operators {
+  background-color: #f37f26;
+  color: white;
+}
+
+#leftOperand, #rightOperand {
+  width: 40%;
+  width: 80px;
+  height: 50px;
+  background-color:  #817570;
+  color: white;
+  text-align: center;
+  float: left;
+  font-size: 125%;
+}
+
+#Operator  {
+  width: 20%;
+  height: 50px;
+  background-color:  #817570;
+  color: white;
+  text-align: center;
+  float: left;
+  font-size: 125%;
+  border-top: 3px inset lightgrey;
+ 
+}
+
+button {
+  vertical-align: bottom;
+  background-color: lightgrey;
+  padding: 0px;
+  margin: 0px;
+  border: 0.5px solid darkgrey;
+  height: 50px;
+  width: 50px;
+  color: black;
+  float: left;
+}
+
+#buttonClear {
+  background-color: #817570;
+}
+#buttonDivide {
+  border-bottom-right-radius: 5px;
+}
+#buttonClear {
+  border-bottom-left-radius: 5px;
+}
+#leftOperand {
+  border-top-left-radius: 5px;
+}
+#rightOperand {
+  border-top-right-radius: 5px;
+}
